@@ -26,7 +26,7 @@ function Fourth() {
             <div class="aspect-w-16 aspect-h-9 lg:aspect-none">
               <img
                 class="w-full object-cover rounded-xl"
-                src="/jalingo.jpg"
+                src="/foe.jpg"
                 alt="Features Image"
               />
             </div>
@@ -88,31 +88,13 @@ function Fourth() {
                   <p class="text-sm md:text-base text-neutral-400">
                     <span class="text-brown-600">Voting System: </span>
                     Registered users can upvote entries one vote per entry per
-                    user - Entries must have atleast 20 upvotes to be
-                    automaticallu displayed on the platform. Users cannot vote
+                    user - Entries must have atleast 20 upvotes will be
+                    automatically displayed on the platform. Users cannot vote
                     for their own entries.
                   </p>
                 </div>
               </div>
 
-              <div class="flex gap-x-5 ms-1">
-                <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div class="relative z-10 size-8 flex justify-center items-center">
-                    <span class="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-black font-semibold text-xs uppercase rounded-full">
-                      4
-                    </span>
-                  </div>
-                </div>
-
-                <div class="grow pt-0.5 pb-8 sm:pb-12">
-                  <p class="text-sm md:text-base text-neutral-400">
-                    <span class="text-brown-600">News Promotion: </span>
-                    If Certain criteria (e.g., sustained popularity, community
-                    impact, uniqueness) are met, entries will be promoted in the
-                    Taraba Television.
-                  </p>
-                </div>
-              </div>
 
               <div class="flex gap-x-5 ms-1">
                 <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
@@ -127,13 +109,13 @@ function Fourth() {
                   <p class="text-sm md:text-base text-neutral-400">
                     <span class="text-brown-600">User Interaction: </span>
                     Users will be able to comment on entries and also share
-                    entries on social media platforms.
+                    entries to social media platforms.
                   </p>
                 </div>
               </div>
 
-              <div class="flex gap-x-5 ms-1">
-                <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
+              {/* <div class="flex gap-x-5 ms-1"> */}
+                {/* <div class="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
                   <div class="relative z-10 size-8 flex justify-center items-center">
                     <span class="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-black font-semibold text-xs uppercase rounded-full">
                       6
@@ -150,7 +132,7 @@ function Fourth() {
                     periodically (e.g., weekly) so as to give everyone a chance.
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               <a
                 class="group inline-flex items-center gap-x-2 py-2 px-3 bg-gray-100 font-medium text-sm text-neutral-800 rounded-full focus:outline-none"

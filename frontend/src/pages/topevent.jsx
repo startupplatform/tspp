@@ -7,7 +7,7 @@ const eventExample = {
   backgroundImage: "/church.jpg",
   date: "August 15-17, 2024",
   time: "9:00 AM - 6:00 PM",
-  location: "Traid Fair, Jalingo Taraba State",
+  location: "Heritage Campus, Benson Idahosa University",
   description:
     "Join us for the Koinonia! Featuring Joshua Selman and keynote speakers.",
   ads: [{ image: "/c.jpg" }, { image: "/bg.jpg" }, { image: "/cover.jpg" }],

@@ -7,7 +7,7 @@ function Footer() {
     <div class="flex flex-wrap justify-between items-center gap-2">
       <div>
         <p class="text-xs text-gray-600 dark:text-neutral-400">
-          © 2024 Taraba State Promotion Platform.
+          © 2024 BIU Hub.
         </p>
       </div>
 

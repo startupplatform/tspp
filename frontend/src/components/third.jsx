@@ -23,7 +23,7 @@ function ThirdSection() {
         <div class="aspect-w-16 aspect-h-5">
           <img
             class="w-full object-cover rounded-xl"
-            src="/in.jpg"
+            src="/biu.webp"
             alt="Features Image"
           />
         </div>
@@ -36,8 +36,8 @@ function ThirdSection() {
             <p class="mt-2 md:mt-4 text-gray-700 ">
               Besides keeping everyone updated with all events and businesses
               upcoming and available, we have built enterprises for giving
-              popularity and support to all businessses in taraba state as well
-              as all events.
+              popularity and support to all student businessses in Benson
+              Idahosa University as well as all events.
             </p>
           </div>
 
@@ -67,8 +67,8 @@ function ThirdSection() {
                     Creative minds
                   </h3>
                   <p class="mt-1 text-gray-700 ">
-                    We give upmost priority to creative people of taraba who
-                    have no platfrom to air their creativity.
+                    We give upmost priority to creative people of benson idahosa
+                    university who have no platfrom to air their creativity.
                   </p>
                 </div>
               </div>
@@ -94,8 +94,8 @@ function ThirdSection() {
                     Simple and affordable
                   </h3>
                   <p class="mt-1 text-gray-700 ">
-                    From advertising your corner shop, to promoting your music,
-                    there's pretty much nothing you can't do with TSPP.
+                    From advertising your business, to promoting your events,
+                    there's pretty much nothing you can't do with BIU HUB.
                   </p>
                 </div>
               </div>

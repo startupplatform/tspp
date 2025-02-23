@@ -222,7 +222,7 @@ exports.loginUser = async (req, res) => {
       .status(200)
       .json({ message: "Login successful", token: accessToken });
   } catch (error) {
-    // console.error("Error logging in user:", error);
+    console.error("Error logging in user:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };

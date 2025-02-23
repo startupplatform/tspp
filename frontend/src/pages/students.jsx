@@ -118,7 +118,7 @@ const StudentBusinesses = () => {
             color="brown"
             className="font-bold text-xl md:text-2xl lg:text-3xl"
           >
-            Taraba Students Businesses
+            BIU Students Businesses
           </Typography>
         </div>
 

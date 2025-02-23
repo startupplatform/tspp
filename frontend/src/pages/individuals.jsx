@@ -118,7 +118,7 @@ const Individuals = () => {
             color="brown"
             className="font-bold text-2xl md:text-3xl lg:text-4xl"
           >
-            Taraba Stars
+            BIU Stars
           </Typography>
         </div>
 

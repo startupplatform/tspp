@@ -39,7 +39,7 @@ function createEmailTemplate(title, content, buttonText, buttonUrl) {
 <body>
   <div class="container">
     <div class="header">
-      <h1>Taraba Promotion Platform</h1>
+      <h1>BIU HUB</h1>
     </div>
     <div class="content">
       ${content}
@@ -49,7 +49,7 @@ function createEmailTemplate(title, content, buttonText, buttonUrl) {
       </div>
     </div>
     <div class="footer">
-      &copy; ${new Date().getFullYear()} Taraba Promotion Platform. All rights reserved.
+      &copy; ${new Date().getFullYear()} BIU HUB. All rights reserved.
     </div>
   </div>
 </body>
@@ -60,17 +60,17 @@ function createEmailTemplate(title, content, buttonText, buttonUrl) {
 exports.sendConfirmation = async (username, email, url) => {
   const content = `
     <h2>Welcome, ${username}!</h2>
-    <p>Thank you for joining the Taraba Promotion Platform. We're excited to have you on board!</p>
+    <p>Thank you for joining the BIU HUB. We're excited to have you on board!</p>
     <p>To complete your registration and verify your email address, please click the button below:</p>
   `;
 
   const mailOptions = {
     from: {
-      name: "Taraba Promotion Platform",
+      name: "BIU HUB",
       address: process.env.GMAIL_USER,
     },
     to: email,
-    subject: "Welcome to Taraba Promotion Platform - Verify Your Email",
+    subject: "Welcome to BIU HUB - Verify Your Email",
     html: createEmailTemplate(
       "Email Verification",
       content,
@@ -86,18 +86,18 @@ exports.sendConfirmation = async (username, email, url) => {
 exports.sendForgotPassword = async (username, email, url) => {
   const content = `
     <h2>Hello, ${username}</h2>
-    <p>We received a request to reset the password for your Taraba Promotion Platform account.</p>
+    <p>We received a request to reset the password for your BIU HUB account.</p>
     <p>If you didn't make this request, you can safely ignore this email. Otherwise, please click the button below to reset your password:</p>
     <p><strong>Note:</strong> This link will expire in 30 minutes for security reasons.</p>
   `;
 
   const mailOptions = {
     from: {
-      name: "Taraba Promotion Platform",
+      name: "BIU HUB",
       address: process.env.GMAIL_USER,
     },
     to: email,
-    subject: "Password Reset Request - Taraba Promotion Platform",
+    subject: "Password Reset Request - BIU HUB",
     html: createEmailTemplate("Password Reset", content, "Reset Password", url),
   };
 

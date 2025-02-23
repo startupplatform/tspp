@@ -17,7 +17,7 @@ function TarabaBusinessHub() {
               className="inline-flex items-center gap-x-2 bg-white border border-brown-200 text-sm text-brown-800 p-1 ps-3 rounded-full transition hover:border-brown-300 focus:outline-none focus:border-brown-300 shadow-sm"
               href="/individual"
             >
-              New: Upcoming Taraba Stars
+              New: Upcoming BIU Stars
               <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-brown-100 font-semibold text-sm text-brown-800">
                 <svg
                   className="shrink-0 w-4 h-4"
@@ -37,20 +37,20 @@ function TarabaBusinessHub() {
 
           <div className="mt-8 max-w-3xl text-center mx-auto">
             <h1 className="block font-bold text-brown-700 text-3xl md:text-5xl lg:text-6xl">
-              Discover Taraba
+              Discover Benson Idahosa University
             </h1>
           </div>
 
           <div className="mt-4 max-w-2xl text-center mx-auto">
             <p className="text-lg text-gray-700">
               Your one-stop platform for exploring local businesses, upcoming
-              events, and staying connected with Taraba's vibrant community.
+              events, and staying connected with BIU's vibrant community.
             </p>
           </div>
 
           <div className="mt-14 gap-4 flex justify-center">
             <a
-              className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-r from-brown-500 to-brown-500 hover:from-brown-600 hover:to-brown-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 py-3 px-6"
+              className="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-r from-brown-500 to-brown-500 hover:from-brown-600 hover:to-brown-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-2 py-3 px-6"
               href="/addevent"
             >
               List An Entry

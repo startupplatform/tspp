@@ -14,11 +14,7 @@ function Fifth() {
           <div class="lg:col-span-7">
             <div class="grid grid-cols-1 items-center ">
               <div class="">
-                <img
-                  class="rounded-xl"
-                  src="/taraba.png"
-                  alt="Features Image"
-                />
+                <img class="rounded-xl" src="/legacy.png" alt="Features Image" />
               </div>
             </div>
           </div>
@@ -30,8 +26,9 @@ function Fifth() {
                   Collaborative tools to Improve livelihood
                 </h2>
                 <p class="text-gray-500 dark:text-neutral-500">
-                  Use our platform to explore taraba state and also make your
-                  ideas, dreams and vision come true. Then share them easily.
+                  Use our platform to explore Benson Idahosa University and also
+                  make your ideas, dreams and vision come true. Then share them
+                  easily.
                 </p>
               </div>
 
@@ -128,7 +125,8 @@ function Fifth() {
                   </span>
                   <div class="grow">
                     <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
-                      Put a smile on all <span class="font-bold">Tarabians</span>
+                      Put a smile on all{" "}
+                      <span class="font-bold">Tarabians</span>
                     </span>
                   </div>
                 </li>

@@ -7,7 +7,7 @@ const eventExample = {
   backgroundImage: "/cov.jpg",
   date: "August 15-17, 2024",
   time: "9:00 AM - 6:00 PM",
-  location: "Traid Fair, Jalingo Taraba State",
+  location: "Science Faculty, Benson Idahosa University",
   description:
     "Join us for the biggest tech event of the year! Featuring keynote speakers, workshops, and networking opportunities with industry leaders.",
   ads: [{ image: "/c.jpg" }, { image: "/bg.jpg" }, { image: "/cover.jpg" }],
@@ -29,7 +29,7 @@ const ViewAdvert = () => {
       <div className="relative z-10 container mx-auto px-4 py-4">
         <div className="mt-2 max-w-3xl text-center mx-auto mb-4">
           <h1 className="block font-bold text-brown-700 text-2xl md:text-3xl lg:text-3xl">
-            Top Taraba Trends
+            Top BIU Trends
           </h1>
         </div>
         <EventDetails event={eventExample} />

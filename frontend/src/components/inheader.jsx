@@ -228,7 +228,7 @@ export function InHeader() {
             variant="h6"
             className="mr-4 cursor-pointer py-1.5"
           >
-            TSPP
+            BIU HUB
           </Typography>
           <div className="hidden lg:flex">
             <NavList />
