@@ -4,7 +4,7 @@ import SignUp from "./pages/signup";
 import SignIn from "./pages/signin";
 import LarsTerms from "./pages/terms";
 import ForgotPassword from "./pages/forgotpassword";
-import TarabaBusinessHub from "./pages/second";
+import BIUBusinessHub from "./pages/second";
 import AddEvent from "./pages/event";
 import ViewEvent from "./pages/dashboard";
 import VerifyEmail from "./pages/VerifyEmail";
@@ -40,7 +40,7 @@ function App() {
         <Route path="/verify/token/:email/:token" element={<ValidateEmail />} />
         <Route path="/tokenexpired" element={<TokenExpired />} />
         <Route path="/tokenused" element={<TokenUsedPage />} />
-        <Route path="/start" element={<TarabaBusinessHub />} />
+        <Route path="/start" element={<BIUBusinessHub />} />
         <Route path="/addevent" element={<AddEvent />} />
         <Route path="/dashboard" element={<ViewEvent />} />
         <Route path="/advert" element={<ViewAdvert />} />

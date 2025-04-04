@@ -5,14 +5,12 @@ const clientId =
 const GoogleSignInButton = () => {
   const handleSuccess = (response) => {
     console.log("Login Success:", response);
-    // Send the authorization code to your server for verification
     fetch("/api/auth/google", {
       method: "POST",
       body: JSON.stringify({ code: response.code }),
     })
       .then((response) => response.json())
       .then((data) => {
-        // Handle successful authentication (e.g., store tokens, redirect to a different page)
         console.log("Successfully authenticated!", data);
       })
       .catch((error) => {

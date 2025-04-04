@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { InHeader } from "../components/inheader";
 
-function TarabaBusinessHub() {
+function BIUBusinessHub() {
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
@@ -72,7 +72,7 @@ function TarabaBusinessHub() {
               className="inline-flex justify-center items-center gap-x-3 text-center border border-gray-300 text-gray-800 text-sm font-medium rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 py-3 px-6"
               href="/business"
             >
-               Businesses
+              Businesses
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="shrink-0 w-5 h-5"
@@ -94,7 +94,7 @@ function TarabaBusinessHub() {
                 Featured Categories:
               </span>
               <span className="text-sm text-gray-600">
-                Entries • Events • Advert • Individuals 
+                Entries • Events • Advert • Individuals
               </span>
             </div>
           </div>
@@ -104,4 +104,4 @@ function TarabaBusinessHub() {
   );
 }
 
-export default TarabaBusinessHub;
+export default BIUBusinessHub;

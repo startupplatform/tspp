@@ -126,7 +126,7 @@ function Fifth() {
                   <div class="grow">
                     <span class="text-sm sm:text-base text-gray-500 dark:text-neutral-500">
                       Put a smile on all{" "}
-                      <span class="font-bold">Tarabians</span>
+                      <span class="font-bold">Students</span>
                     </span>
                   </div>
                 </li>
