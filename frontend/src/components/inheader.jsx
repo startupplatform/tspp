@@ -183,14 +183,7 @@ export function InHeader() {
         { path: "/business", label: "Other Businesses", icon: Building },
       ],
     },
-    {
-      label: "Religious Events",
-      icon: Books,
-      children: [
-        { path: "/topevent", label: "Christain Events", icon: Cross },
-        { path: "/topevent", label: "Islamic Events", icon: Book },
-      ],
-    },
+    { path: "/topevent", label: "Religious Events", icon: Cross },
     { path: "/topevent", label: "Other Events", icon: DiscoBall },
     { path: "/delivery", label: "Delivery Service", icon: Motorcycle },
     { path: "/individual", label: "Individuals", icon: IdentificationBadge },

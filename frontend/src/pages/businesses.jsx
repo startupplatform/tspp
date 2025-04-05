@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { InHeader } from "../components/inheader";
 import {
   Typography,
@@ -6,175 +6,137 @@ import {
   CardBody,
   Button,
   IconButton,
+  CardFooter,
 } from "@material-tailwind/react";
-import { ArrowRight, Phone } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
-
-const categories = [
-  {
-    name: "Restaurants",
-    businesses: [
-      {
-        name: "Acme Diner",
-        description: "Classic American diner fare",
-        phone: "555-0101",
-      },
-      {
-        name: "Sushi Delights",
-        description: "Authentic Japanese sushi",
-        phone: "555-0102",
-      },
-      {
-        name: "The Pasta House",
-        description: "Homemade Italian pasta",
-        phone: "555-0103",
-      },
-      {
-        name: "Burger Bliss",
-        description: "Juicy burgers and fries",
-        phone: "555-0104",
-      },
-      {
-        name: "Spice Emporium",
-        description: "Flavorful Indian cuisine",
-        phone: "555-0105",
-      },
-    ],
-  },
-  {
-    name: "Hotels",
-    businesses: [
-      {
-        name: "Chic Boutique",
-        description: "Trendy fashion and accessories",
-        phone: "555-0201",
-      },
-      {
-        name: "Bookworm's Haven",
-        description: "Cozy bookstore with rare finds",
-        phone: "555-0202",
-      },
-      {
-        name: "Green Thumb",
-        description: "Nursery and gardening supplies",
-        phone: "555-0203",
-      },
-      {
-        name: "Tech Emporium",
-        description: "Latest electronics and gadgets",
-        phone: "555-0204",
-      },
-      {
-        name: "Artisan Crafts",
-        description: "Handmade local crafts and gifts",
-        phone: "555-0205",
-      },
-    ],
-  },
-  {
-    name: "Services",
-    businesses: [
-      {
-        name: "Wellness Spa",
-        description: "Relaxing spa treatments",
-        phone: "555-0301",
-      },
-      {
-        name: "Legal Experts",
-        description: "Professional legal services",
-        phone: "555-0302",
-      },
-      {
-        name: "Accounting Solutions",
-        description: "Comprehensive financial services",
-        phone: "555-0303",
-      },
-      {
-        name: "IT Consultants",
-        description: "Reliable tech support and solutions",
-        phone: "555-0304",
-      },
-      {
-        name: "Event Planners",
-        description: "Curated events and celebrations",
-        phone: "555-0305",
-      },
-    ],
-  },
-];
+import { ArrowRight, Phone, MapPin, Info, Clock } from "@phosphor-icons/react";
+import { Link, useNavigate } from "react-router-dom";
+import categories from "../components/categoriesmock";
 
 const Businesses = () => {
+  const navigate = useNavigate();
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const handleBusinessClick = (categoryName, businessId) => {
+    navigate(`/business/${categoryName.toLowerCase()}/${businessId}`);
+  };
+
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: "url('/four.jpg')" }}
     >
-      <div className="absolute inset-0 bg-brown-50 bg-opacity-70"></div>
+      <div className="absolute inset-0 bg-brown-50 bg-opacity-90"></div>
       <InHeader />
       <div className="relative z-10 container mx-auto px-4 py-4">
-        <div className="mt-2 max-w-3xl text-center mx-auto mb-4">
+        <div className="max-w-4xl text-center mx-auto mb-8">
           <Typography
             variant="h1"
             color="brown"
-            className="font-bold text-2xl md:text-3xl lg:text-4xl"
+            className="font-bold text-3xl md:text-4xl mb-2"
           >
-            Explore Businesses
+            Campus Services
+          </Typography>
+          <Typography color="brown-gray" className="text-lg">
+            Discover resources and services available for students, faculty, and
+            staff
           </Typography>
         </div>
 
         {categories.map((category) => (
           <div
             key={category.name}
-            className="mb-4 bg-white rounded-xl shadow-md p-6"
+            className="mb-8 bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
           >
-            <div className="flex items-center justify-between mb-4">
-              <Typography
-                variant="h2"
-                color="brown"
-                className="text-xl font-bold"
-              >
-                {category.name}
-              </Typography>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div>
+                <Typography
+                  variant="h2"
+                  color="brown"
+                  className="text-2xl font-bold mb-2"
+                >
+                  {category.name}
+                </Typography>
+                <Typography color="brown-gray" className="text-md">
+                  {category.description}
+                </Typography>
+              </div>
               <Link
-                href="#"
-                className="text-brown-600 hover:text-brown-800"
-                prefetch={false}
+                to={`/category/${category.name.toLowerCase()}`}
+                className="mt-3 md:mt-0"
               >
                 <Button
                   color="brown"
                   size="sm"
-                  variant="text"
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 rounded-lg"
                 >
                   View all
                   <ArrowRight size={16} />
                 </Button>
               </Link>
             </div>
-            <div className="flex overflow-x-auto pb-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {category.businesses.map((business, index) => (
-                <Card key={index} className="w-64 shrink-0 bg-brown-50">
+                <Card
+                  key={index}
+                  className={`bg-brown-50 transition-all duration-300 ${
+                    hoveredCard === `${category.name}-${business.id}`
+                      ? "shadow-lg transform -translate-y-1"
+                      : "shadow"
+                  }`}
+                  onMouseEnter={() =>
+                    setHoveredCard(`${category.name}-${business.id}`)
+                  }
+                  onMouseLeave={() => setHoveredCard(null)}
+                  onClick={() =>
+                    handleBusinessClick(category.name, business.id)
+                  }
+                >
+                  <div className="h-36 bg-brown-100 rounded-t-xl flex items-center justify-center">
+                    <Info size={48} className="text-brown-300" />
+                    {/* Image would go here in production */}
+                    {/* <img 
+                      src={business.image} 
+                      alt={business.name}
+                      className="w-full h-full object-cover rounded-t-xl"
+                    /> */}
+                  </div>
                   <CardBody>
-                    <Typography variant="h6" color="brown" className="mb-1">
+                    <Typography
+                      variant="h6"
+                      color="brown"
+                      className="mb-2 font-bold"
+                    >
                       {business.name}
                     </Typography>
-                    <Typography color="gray" className="text-sm mb-2">
+                    <Typography color="brown-gray" className="text-sm mb-3">
                       {business.description}
                     </Typography>
-                    <div className="flex items-center justify-between">
-                      <Typography color="brown" className="text-sm font-medium">
-                        {business.phone}
+                    <div className="flex items-center gap-2 text-sm mb-2">
+                      <MapPin size={16} className="text-brown-500" />
+                      <Typography color="brown-gray" className="text-sm">
+                        {business.location}
                       </Typography>
-                      <IconButton
-                        variant="text"
-                        color="brown"
-                        size="sm"
-                        className="rounded-full"
-                      >
-                        <Phone size={18} />
-                      </IconButton>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <Clock size={16} className="text-brown-500" />
+                      <Typography color="brown-gray" className="text-sm">
+                        {business.hours}
+                      </Typography>
                     </div>
                   </CardBody>
+                  <CardFooter className="pt-0 flex items-center justify-between">
+                    <Typography color="brown" className="text-sm font-medium">
+                      {business.phone}
+                    </Typography>
+                    <IconButton
+                      variant="text"
+                      color="brown"
+                      size="sm"
+                      className="rounded-full"
+                    >
+                      <Phone size={18} />
+                    </IconButton>
+                  </CardFooter>
                 </Card>
               ))}
             </div>

@@ -20,6 +20,8 @@ import TokenUsedPage from "./pages/tokenused";
 import TokenExpired from "./pages/TokenExpiredPage";
 import NotVerified from "./pages/notverified";
 import StudentBusinesses from "./pages/students";
+import BusinessDetail from "./pages/BusinessDetail";
+// import categories from "./components/categoriesmock";
 
 function App() {
   return (
@@ -44,7 +46,11 @@ function App() {
         <Route path="/addevent" element={<AddEvent />} />
         <Route path="/dashboard" element={<ViewEvent />} />
         <Route path="/advert" element={<ViewAdvert />} />
-        <Route path="/business" element={<Businesses />} />
+       <Routes>
+        <Route path="/businesses" element={<Businesses />} />
+        <Route path="/business/:categoryName/:businessId" element={<BusinessDetail />} />
+        {/* <Route path="/category/:categoryName" element={<categories />} /> */}
+      </Routes>
         <Route path="/topevent" element={<TopEvents />} />
         <Route path="/individual" element={<Individuals />} />
         <Route path="/student" element={<StudentBusinesses />} />
