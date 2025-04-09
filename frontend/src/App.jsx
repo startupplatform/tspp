@@ -46,11 +46,11 @@ function App() {
         <Route path="/addevent" element={<AddEvent />} />
         <Route path="/dashboard" element={<ViewEvent />} />
         <Route path="/advert" element={<ViewAdvert />} />
-       <Routes>
+       {/* <Routes> */}
         <Route path="/businesses" element={<Businesses />} />
         <Route path="/business/:categoryName/:businessId" element={<BusinessDetail />} />
         {/* <Route path="/category/:categoryName" element={<categories />} /> */}
-      </Routes>
+      {/* </Routes> */}
         <Route path="/topevent" element={<TopEvents />} />
         <Route path="/individual" element={<Individuals />} />
         <Route path="/student" element={<StudentBusinesses />} />
